@@ -53,7 +53,7 @@ class FolhaPagamento():
     def calcular_fgts(cls, salario):
         return salario * 0.08
     
-     @classmethod
+    @classmethod
     def criar_arquivo_com_olerite(cls):
         folhas_de_pagamento_funcionario = {}
         for dado in cls.folhas_de_pagamento:
