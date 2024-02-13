@@ -1,0 +1,23 @@
+[
+    {
+        "cargo": "salva vidas",
+        "salario": 3000,
+        "desconto de inss": 258.82,
+        "desconto irrf": 47.188499999999976,
+        "fgts": 240.0
+    },
+    {
+        "cargo": "salva vidas",
+        "salario": 3000,
+        "desconto de inss": 258.82,
+        "desconto irrf": 47.188499999999976,
+        "fgts": 240.0
+    },
+    {
+        "cargo": "salva vidas",
+        "salario": 3000,
+        "desconto de inss": 258.82,
+        "desconto irrf": 47.188499999999976,
+        "fgts": 240.0
+    }
+]

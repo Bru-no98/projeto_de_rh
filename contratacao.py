@@ -13,8 +13,8 @@ class Funcionario:
     def __str__(self):
         return f'{self._nome.ljust(25)} | {self._cargo.ljust(25)} | {str(self._salario).ljust(25)}'
     
-    def gerar_olerite(self, data):
-        olerite = FolhaPagamento(self._nome, self._cargo, self._salario, data)
+    def gerar_olerite(self):
+        olerite = FolhaPagamento(self._nome, self._cargo, self._salario)
         self._olerites.append(olerite)
 
     def printar_olerites(self):

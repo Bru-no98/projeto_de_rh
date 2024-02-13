@@ -1,8 +1,9 @@
 from contratacao import Funcionario
-from datetime import datetime
+from folha_de_pagamento import FolhaPagamento
 
 funcionario = Funcionario('bruno', 'salva vidas', 3000)
-funcionario.gerar_olerite(datetime.now())
+funcionario.gerar_olerite()
+funcionario.gerar_olerite()
+funcionario.gerar_olerite()
 
-funcionario.printar_olerites()
-
+FolhaPagamento.criar_arquivo_com_olerite()
