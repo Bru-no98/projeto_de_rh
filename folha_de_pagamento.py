@@ -7,10 +7,16 @@ class FolhaPagamento():
         self._data = data
         self._desconto_inss = FolhaPagamento.calcular_inss(self._salario)
         self._desconto_irrf = FolhaPagamento.calcular_irrf(self._salario, self._desconto_inss)
-        self._calculo_fgts = None
+        self._calculo_fgts = FolhaPagamento.calcular_fgts(self._salario)
         
     def __str__(self):
-        return f'Folha de Pagamento de {self._nome}: \n SALÁRIO: {self._salario} | INSS: {self._desconto_inss} | IR: {self._desconto_irrf} | FGTS: {self._calculo_fgts}'
+        return f'Folha de Pagamento de {self._nome}: \n SALÁRIO: {self._salario} | INSS: {self._desconto_inss} | IR: {self.desconto_irrf} | FGTS: {self._calculo_fgts}'
+    
+    @property
+    def desconto_irrf(self):
+        irrf_formatado = format(self._desconto_irrf, f".{2}f")
+        return irrf_formatado
+    
     
     @classmethod
     def calcular_inss(cls, salario):
@@ -40,3 +46,9 @@ class FolhaPagamento():
         else:
             desconto_irrf = salario_irrf * 0.275 - 884.96
         return desconto_irrf
+    
+    @classmethod
+    def calcular_fgts(cls, salario):
+        return salario * 0.08
+        
+
